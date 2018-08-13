@@ -15,19 +15,11 @@ type Props = {};
 export default class App extends Component<Props> {
     render() {
         return (
-            <View style={styles.container}>
-                <Header />
-            </View>
+
+            <Header/>
+
         );
     }
 }
 
-const styles = StyleSheet.create({
-    //Styles are camelCased rather than dash-cased
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    }
-});
+const styles = StyleSheet.create({});
