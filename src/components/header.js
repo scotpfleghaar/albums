@@ -14,11 +14,18 @@ const Header = () => {
 const styles = StyleSheet.create({
     //Styles are camelCased rather than dash-cased
     container: {
-        flex: 1,
-        justifyContent: 'flex-start',
+        // flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-        paddingTop: 30
+        backgroundColor: '#fcfcfc',
+        paddingTop: 30,
+        paddingBottom: 10,
+        height: 70,
+        shadowColor: '#ccc',
+        shadowOffset: {width: 0, height: 5},
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
     },
     header: {
         fontSize: 30
