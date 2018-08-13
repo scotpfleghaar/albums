@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     //Styles are camelCased rather than dash-cased
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
-        height: 30
+        paddingTop: 30
     },
     header: {
         fontSize: 30
