@@ -15,9 +15,10 @@ type Props = {};
 export default class App extends Component<Props> {
     render() {
         return (
+            <View>
+                <Header headerText="Albums!"/>
 
-            <Header/>
-
+            </View>
         );
     }
 }
