@@ -3,13 +3,15 @@ import {View, Text} from 'react-native';
 import Axios from 'axios';
 
 class AlbumList extends Component {
+
+    state = {
+        albums: []
+    };
+
     componentWillMount() {
         //  https://rallycoding.herokuapp.com/api/music_albums
-        Axios.get('https://rallycoding.herokuapp.com/api/music_albums').then((response) => {
-            console.log(response);
-        }).catch((error) => {
-            console.log(error);
-        })
+        Axios.get('https://rallycoding.herokuapp.com/api/music_albums').then((response) => this.setState({albums: response.data})
+        ).catch((error) => console.log(error))
     }
 
     render() {
@@ -18,6 +20,7 @@ class AlbumList extends Component {
                 <Text> Album List</Text>
             </View>
         )
+
     }
 }
 
