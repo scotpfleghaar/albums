@@ -8,7 +8,8 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Header from './components/header';
+import Header from './components/Header';
+import AlbumList from './components/AlbumList';
 
 
 type Props = {};
@@ -17,7 +18,7 @@ export default class App extends Component<Props> {
         return (
             <View>
                 <Header headerText="Albums!"/>
-
+                <AlbumList/>
             </View>
         );
     }
