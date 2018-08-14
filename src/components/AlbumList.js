@@ -14,10 +14,18 @@ class AlbumList extends Component {
         ).catch((error) => console.log(error))
     }
 
+    renderAlbums = () => {
+        return this.state.albums.map((album, index) => {
+            return (
+                <Text key={index}>{album.title}</Text>
+            )
+        })
+    };
+
     render() {
         return (
             <View>
-                <Text> Album List</Text>
+                {this.renderAlbums()}
             </View>
         )
     }
