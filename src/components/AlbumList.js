@@ -20,7 +20,6 @@ class AlbumList extends Component {
                 <Text> Album List</Text>
             </View>
         )
-
     }
 }
 
