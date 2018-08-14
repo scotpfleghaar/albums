@@ -24,3 +24,4 @@ export default class App extends Component<Props> {
 }
 
 const styles = StyleSheet.create({});
+//http://rallycoding.herokuapp.com/api/music_albums
