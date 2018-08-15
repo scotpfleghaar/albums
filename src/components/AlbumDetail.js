@@ -4,18 +4,21 @@ import Card from './Card';
 import CardSection from './CardSection'
 
 const AlbumDetail = (props) => {
-    const {album: {thumbnail_image, artist, title}} = props;
-    const {thumbNail, headerContentStyle} = styles;
+    const {album: {thumbnail_image, artist, title, image}} = props;
+    const {thumbNail, headerContentStyle, thumbnailContainer, headerText, imageStyle} = styles;
     return (
         <Card>
             <CardSection>
-                <View>
+                <View style={thumbnailContainer}>
                     <Image style={thumbNail} source={{uri: thumbnail_image}}/>
                 </View>
                 <View style={headerContentStyle}>
+                    <Text style={headerText}>{title}</Text>
                     <Text>{artist}</Text>
-                    <Text>{title}</Text>
                 </View>
+            </CardSection>
+            <CardSection>
+                <Image style={imageStyle} source={{uri: image}}/>
             </CardSection>
         </Card>
     )
@@ -26,11 +29,25 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-around'
     },
+    headerText: {
+        fontSize: 18
+    },
     thumbNail: {
         height: 50,
         width: 50,
-        marginRight: 5
+    },
+    thumbnailContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 10,
+        marginLeft: 10
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
     }
+
 });
 
 export default AlbumDetail;
